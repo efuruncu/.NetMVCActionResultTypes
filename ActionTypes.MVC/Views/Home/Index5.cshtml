@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "Index5";
+}
+
+<html>
+<head>
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Index5</title>
+</head>
+<body>
+    <div>
+        <h2>Index5</h2>
+    </div>
+    <div>
+        @using (Html.BeginForm())
+        {
+            @Html.TextBox("ad", "", new { placeholder ="adınız"})<br/>
+            @Html.TextBox("soyad","",new {placeholder ="soyadınız" })
+            <hr/>
+            <button type="submit">Kaydet</button>
+        }
+    </div>
+    <div>
+        <hr />
+    </div>
+    <div>
+@if(ViewBag.Liste != null)
+{
+<ul>
+    @foreach(string item in (List<string>)ViewBag.Liste){
+        <li>
+            @item
+        </li>
+    }
+</ul>
+}
+    </div>
+    </body>
+</html>
+

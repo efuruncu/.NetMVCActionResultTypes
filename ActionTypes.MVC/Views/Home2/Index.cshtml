@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<html>
+<head>
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <h2>Anasayfa</h2>
+    </div><hr />
+          <div>
+              @* @Html.Partial("_KategorilerPartial");*@
+              @Html.Action("GetirKategorilerPartial","Home2")
+              <hr />
+              @Html.Action("GetirKategorilerPartial2","Home2")
+          </div>
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>
+

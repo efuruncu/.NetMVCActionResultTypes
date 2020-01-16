@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Index3";
+}
+
+    <html>
+    <head>
+
+        <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Index3</title>
+    </head>
+    <body>
+        <div>
+            <h2>Index3</h2>
+        </div>
+        <div>
+            <input type="button" id="btnJsonResult" value="Veri Getir"/>
+        </div>
+        <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+        <script>
+            $(function () {
+                $('#btnJsonResult').click(
+                    function () {
+                        $.ajax({
+                            type: "GET",
+                            url: "/Home/Index4",
+                            contentType: "application/json; charset=utf-8",
+                            dataType: "json",
+                            success: function (e) {
+                                alert(e.ID+"-"+e.Adi+"-"+e.Fiyat+"-"+e.Aciklama);
+                            }
+                        });
+                    }
+                );
+            });
+        </script>
+    </body>
+    </html>
+
